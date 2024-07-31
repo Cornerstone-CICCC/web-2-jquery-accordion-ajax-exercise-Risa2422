@@ -12,10 +12,8 @@ $(function () {
   const button = $(".todos");
   button.find("button").on("click", async function () {
     const data = await getData();
-    console.log(data);
 
     const todoList = $("ul");
-    let text = "";
     for (let i = 0; i < data.todos.length; i++) {
       todoList.append().HTML(`<li>${data.todos[i].todo}</li>`);
     }
