@@ -17,9 +17,8 @@ $(function () {
     const todoList = $("ul");
     let text = "";
     for (let i = 0; i < data.todos.length; i++) {
-      text += `<li>${data.todos[i].todo}</li>`;
+      todoList.append().HTML(`<li>${data.todos[i].todo}</li>`);
     }
-    todoList.html(text);
   });
 
   function getData() {
