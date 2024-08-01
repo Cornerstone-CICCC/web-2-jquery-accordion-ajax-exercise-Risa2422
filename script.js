@@ -12,11 +12,14 @@ $(function () {
   const button = $(".todos");
   button.find("button").on("click", async function () {
     const data = await getData();
-
     const todoList = $("ul");
+
     for (let i = 0; i < data.todos.length; i++) {
-      todoList.append().HTML(`<li>${data.todos[i].todo}</li>`);
+      const listElement = `<li>${data.todos[i].todo}</li>`;
+      todoList.append(listElement);
     }
+
+    todoList.append(listElement);
   });
 
   function getData() {
